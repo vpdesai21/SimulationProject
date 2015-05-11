@@ -1,5 +1,6 @@
 __author__ = 'root'
 
+
 class Menu(object):
     def __init__(self):
         self.items = {"Breakfast Burrito": 5.20,

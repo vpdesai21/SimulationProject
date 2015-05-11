@@ -15,9 +15,9 @@ class QueueManager:
         QueueManager.queue.put(request)
 
     @staticmethod
-    def deque(request):
-        QueueManager.queue.get()
+    def deque():
+        QueueManager.queue.get(True)
 
     @staticmethod
     def print_val():
-        print 'hello sys method'
+        print 'hello print_val method : %s' % QueueManager.queue.qsize()

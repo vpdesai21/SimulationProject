@@ -1,17 +1,21 @@
 __author__ = 'root'
 import Person
 
+
 class Cook(Person):
 
     def __init__(self, name, age, gender, mood, speed):
         Person.__init__(self, name, age, gender, "Cook", mood)
         self.speed = speed
 
-    def getOrder(self):
+    @staticmethod
+    def get_order(self):
         print "order received"
 
-    def processOrder(self):
+    @staticmethod
+    def process_order(self):
         print "Order is in process"
 
-    def informAnnouncer(self):
+    @staticmethod
+    def inform_announcer(self):
         print "Order is ready"

@@ -1,13 +1,17 @@
 __author__ = 'root'
 import Person
-class announcer(Person):
+
+
+class Announcer(Person):
 
     def __init__(self, name, age, gender, mood, speed):
         Person.__init__(self, name, age, gender, "announcer", mood)
 
-    def getOrderToServe(self):
+    @staticmethod
+    def get_order_to_serve(self):
         print "Order Ready"
 
-    def serveOrder(self):
+    @staticmethod
+    def serve_order(self):
         print "Orange sauce, salsa sauce, Paper napkins added. \n Please collect your order"
 

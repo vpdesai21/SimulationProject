@@ -1,6 +1,7 @@
 __author__ = 'root'
 import Person
 
+
 class Customer(Person):
 
     def __init__(self, name, age, gender, mood, money, isHungry, patience):
@@ -9,27 +10,30 @@ class Customer(Person):
         self.isHungry = isHungry
         self.patience = patience
 
-    def giveOrder(self):
+    @staticmethod
+    def give_order(self):
         print("I want XYZ ")
 
-    def observeQueue(self):
+    @staticmethod
+    def observe_queue(self):
         print "How many people are there in queue? Should I wait or should I leave?"
 
-    def checkMenu(self):
+    @staticmethod
+    def check_menu(self):
         print "What should I eat ??"
 
-    def checkMoney(self):
+    @staticmethod
+    def check_money(self):
         print "How much $ are there in my pocket?? "
 
-    def waitInQueue(self):
+    @staticmethod
+    def wait_in_queue(self):
         print "Waiting in queue"
 
-    def collectFood(self):
+    @staticmethod
+    def collect_food(self):
         print "Finally I got my food"
 
-    def getAdditinalItem(self,item):
+    @staticmethod
+    def get_additional_item(self,item):
         print "I want some more ", item
-
-
-
-
