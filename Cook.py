@@ -1,5 +1,7 @@
 __author__ = 'root'
 import Person
+import config
+import time
 
 
 class Cook(Person):
@@ -9,13 +11,21 @@ class Cook(Person):
         self.speed = speed
 
     @staticmethod
-    def get_order(self):
-        print "order received"
+    def get_order(self,order):
+        print "New Order Received"
+        #check if this is right
+        self.process_order(self,order)
+
 
     @staticmethod
-    def process_order(self):
-        print "Order is in process"
+    def process_order(self,order):
+        timeout = 30 / config.simulation_time_factor
+        time.sleep(timeout)
+        print "Order Ready"
+        self.inform_announcer(self,order)
 
     @staticmethod
-    def inform_announcer(self):
+    def inform_announcer(self,order):
+        time.sleep(10)
         print "Order is ready"
+
